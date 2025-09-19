@@ -1,36 +1,9 @@
 import { useCreateProject } from "../hooks/apis/mutations/useCreateProject";
-import { Button, Layout } from "antd";
+import { Button, Layout,Row,Col,Flex } from "antd";
 
 
-  const layoutStyle = {
-    borderRadious: 8,
-    overflow: 'hidden',
-    width: 'calc(50% -8px)',
-    maxWidth: 'calc(50%-8px)',
-  };
 
-  const headerStyle = {
-    color: '#fff',
-    backgroundColor: '#7dbcea',
-    textAlign: 'center',
-    height: 64,
-    paddingInline: 50,
-    lineHeight: '64px',
-  };
 
-  const contentStyle = {
-    textAlign: 'center',
-    minHeight: 120,
-    lineHeight: '120px',
-    color: '#fff',
-    backgroundColor: '#c45ba1ff',
-  };
-
-  const footerStyle = {
-    textAlign: 'center',
-    color: '#fff',
-    backgroundColor: '#7dbcea',
-  };
 
 
 
@@ -55,16 +28,15 @@ export const CreateProject = () => {
   }
 
   return (
-    <Layout style={layoutStyle}>
-      <Header style={headerStyle}>
-        <h1>Create Project</h1>
-      </Header>
-      <Content style={contentStyle}>
-        <Button type="primary" onClick={handleCreateProject} loading={isPending}>Create Playground</Button>
-      </Content>
-      <Footer style={footerStyle}>
-        Footer
-      </Footer>
-    </Layout>
+    <Row>
+      <Col span={12} offset={6} style={{ marginTop: 100 }}>
+        <Flex justify="center" align="center">
+          <Button type="primary" size="large" onClick={handleCreateProject} loading={isPending}>
+            Create New Project
+          </Button>
+        </Flex>
+        </Col>
+
+    </Row>
   )
   }

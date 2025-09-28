@@ -1,0 +1,27 @@
+.editor-button {
+  background-color: transparent;
+  min-width: 100px;
+  height: 30px;
+  border: 1px solid #3c3c3c;
+  border-top: #d4d4d4;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 12px;
+  margin: 0 4px;
+  font-size: 15px;
+  color: #d4d4d4;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  padding: 3px 7px 3px 7px;
+}
+.editor-button:hover {
+  background: #3c3c3c;
+  color: #fff;
+  border-color: #007acc;
+}
+
+.editor-button:focus {
+  background: #2a2d2e;
+  color: #fff;
+  border-color: #007acc;
+  outline: none;
+}

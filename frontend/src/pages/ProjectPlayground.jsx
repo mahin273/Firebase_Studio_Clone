@@ -15,23 +15,25 @@ export const ProjectPlayground = () => {
   }, []);
   return (
     <>
-      ProjectID: {projectIdFromUrl}
-      {projectId && (
-        <div
-          style={{
-            backgroundColor: '#0a3354',
-            paddingRight: '10px',
-            paddingTop: '0.3vh',
-            minWidth: '250px',
-            maxWidth: '25%',
-            height: '99.7vh',
-            overflowY: 'auto',
-          }}
-        >
-          <TreeStructure />
-        </div>
-      )}
-      <EditorComponent />
+      <div style={{display:'flex'}}>
+        {projectId && (
+          <div
+            style={{
+              backgroundColor: '#0a3354',
+              paddingRight: '10px',
+              paddingTop: '0.3vh',
+              minWidth: '250px',
+              maxWidth: '25%',
+              height: '99.7vh',
+              overflowY: 'auto',
+            }}
+          >
+            <TreeStructure />
+          </div>
+        )}
+        <EditorComponent />
+      </div>
+
       <EditorButton isActive={true} />
       <EditorButton isActive={false} />
     </>

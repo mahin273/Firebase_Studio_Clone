@@ -28,7 +28,7 @@ export const EditorComponent = () => {
     <>
       {editorState.theme && (
         <Editor
-          height={'90vh'}
+          height={'80vh'}
           width={'100%'}
           defaultLanguage="javascript"
           defaultValue="//Welcome to Your Code Editor"

@@ -11,6 +11,12 @@ export const TreeNode = ({ fileFolderData }) => {
     });
   }
 
+  function computeExtension() {
+    const names = fileFolderData.name.split('.');
+    return names[names.length - 1];
+
+  }
+
   return (
     fileFolderData && (
       <div
@@ -40,11 +46,12 @@ export const TreeNode = ({ fileFolderData }) => {
             <div style={{
               display: 'flex',
               alignItems: 'center',
+
             }}>
-            <FileIcon extension={fileFolderData.name.split('.')[1]} />
+            <FileIcon extension={computeExtension(fileFolderData)} />
           <p
             style={{
-              paddingTop: '10px',
+              paddingTop: '5px',
               paddingBottom: '15px',
               cursor: 'pointer',
               margin: '5px',
